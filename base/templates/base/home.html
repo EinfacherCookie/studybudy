@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+
+{% block content%}
+
+<h1>Home Template</h1>
+
+<div>
+    <div>
+        {% for room in rooms %}
+            <div>
+                <h5>{{room.id}} -- <a href="{% url 'room' room.id %}">{{room.name}}</a></h5>
+                <!--
+                    url -> lässt zu das urls über name="" angesprochen werden #dynamischBruder
+                    "room.id" ist der Zusatz der Url (Basicaly: "room/{{room.id}}" is the same)
+                -->
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content%}
