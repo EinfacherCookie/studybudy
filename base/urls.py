@@ -7,6 +7,4 @@ urlpatterns = [
     
     path('room/<str:pk>/', views.room, name="room")
     #"str" <- String; ":pk" <- Primary Key (Wert der Übergeben wird)
-    
-    #Test
 ]
